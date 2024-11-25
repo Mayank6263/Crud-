@@ -1,0 +1,19 @@
+<h1 class="head">Articles</h1>
+<table><ul>
+  <tr>
+    <li>
+      <th>@articles.id</th> i want to create a tabular form 
+      <th>content</th>
+      <th>actions</th>
+      <th>destroy</th>
+    </li>
+  </tr>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+</table>
+
+<%= link_to "New Article", new_article_path %>
