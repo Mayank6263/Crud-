@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @article = Article.all
   end
 
   def edit
@@ -8,11 +8,11 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @articles = Article.new
+    @article = Article.new
   end
 
   def show
-    @articles = Article.find(params[:id])    
+    @article = Article.find(params[:id])    
   end
 
   def update
@@ -45,5 +45,10 @@ def destroy
   private
     def article_params
       params.expect(article: [:title, :body])
+    end
+
+  private
+    def article_params
+      params.require(:article).permit(:title, :body, :image, :status)
     end
 end

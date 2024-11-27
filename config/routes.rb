@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # get "articles/show"
   # get "articles/update"
   root "articles#index"
-  resources :articles
+resources :articles do
+  resources :comments, only: [:create, :destroy]
+end
 end

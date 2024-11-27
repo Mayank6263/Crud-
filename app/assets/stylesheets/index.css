@@ -1,3 +1,156 @@
-.head{
-	color: darkred;
+/* articles.css */
+
+/* Global Styles for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading Styling */
+.head {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+/* New Article Button */
+.new-article-btn {
+  background-color: #0275d8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.new-article-btn:hover {
+  background-color: #025aa5;
+}
+
+/* Table Styling */
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-table th, .article-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.article-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Zebra striping for table rows */
+.article-table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.article-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.article-table td {
+  vertical-align: middle;
+}
+
+/* Content Column - Where Title and Body are shown */
+.content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.article-body {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Actions Buttons Styling */
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 8px 16px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+/* Show Button */
+.show-btn {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.show-btn:hover {
+  background-color: #4cae4c;
+  border-color: #4cae4c;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #ec971f;
+  border-color: #ec971f;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+  border-color: #c9302c;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .article-table th, .article-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .new-article-btn {
+    font-size: 14px;
+    width: 100%;
+  }
 }
