@@ -12,7 +12,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])    
+    @article = Article.find(params[:id]) 
+    @comments = @article.comments   
   end
 
   def update
@@ -49,6 +50,6 @@ def destroy
 
   private
     def article_params
-      params.require(:article).permit(:title, :body, :image, :status)
+      params.require(:article).permit(:title, :body, :image)
     end
 end
